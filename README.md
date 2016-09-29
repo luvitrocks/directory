@@ -1,6 +1,6 @@
 # Directory
 
-> Middleware for [luvit.io](http://luvit.io) and [Utopia](https://github.com/luvitrocks/luvit-utopia) that serves pages that contain directory listings for a given path.
+> Middleware for [luvit.io](http://luvit.io) and [Utopia](https://github.com/luvitrocks/utopia) that serves pages that contain directory listings for a given path.
 
 ## Install
 
@@ -23,8 +23,8 @@ Serve directory listings with the given `root` path
 
 ```lua
 local path = require('path')
-local Utopia = require('luvit-utopia')
-local directory = require('luvit-directory')
+local Utopia = require('utopia')
+local directory = require('directory')
 
 local __dirname = module.dir
 local app = Utopia:new()
