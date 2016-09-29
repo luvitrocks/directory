@@ -1,16 +1,12 @@
-# luvit-directory
+# Directory
 
-Middleware for [luvit.io](http://luvit.io) and [Utopia](https://github.com/luvitrocks/luvit-utopia) that serves pages that contain directory listings for a given path.
+> Middleware for [luvit.io](http://luvit.io) and [Utopia](https://github.com/luvitrocks/luvit-utopia) that serves pages that contain directory listings for a given path.
 
 ## Install
 
 ```bash
-npm install luvit-directory
+lit install voronianski/directory
 ```
-
-If you're not familiar with [npm](https://www.npmjs.org/) check this out:
-- https://github.com/voronianski/luvit-npm-example#how-to
-- https://github.com/luvitrocks/luvit-utopia#install
 
 ## API
 
@@ -26,11 +22,12 @@ Serve directory listings with the given `root` path
 ## Example
 
 ```lua
-local utopia = require('luvit-utopia')
-local directory = require('luvit-directory')
 local path = require('path')
+local Utopia = require('luvit-utopia')
+local directory = require('luvit-directory')
 
-local app = utopia:new()
+local __dirname = module.dir
+local app = Utopia:new()
 
 local publicDir = path.join(__dirname, 'public')
 
@@ -43,7 +40,7 @@ app:listen(8080)
 
 MIT Licensed
 
-Copyright (c) 2014 Dmitri Voronianski [dmitri.voronianski@gmail.com](mailto:dmitri.voronianski@gmail.com)
+Copyright (c) 2014-2016 Dmitri Voronianski [dmitri.voronianski@gmail.com](mailto:dmitri.voronianski@gmail.com)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
